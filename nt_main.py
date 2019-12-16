@@ -6,6 +6,7 @@
 
 from nt_definitions import * # contains 'Food' class as well as functions to manipulate them
 import curses # For altering terminal screens
+from nt_procedures import * # houses the main functions of the project
 
 def main(stdscr):
     stdscr.clear()
@@ -36,8 +37,10 @@ def main(stdscr):
             stdscr.clear()
             stdscr.addstr("Option 2")
         elif choice == '3':
-            stdscr.clear()
-            stdscr.addstr("Option 3")
+            # This option will allow a user to add and store a food for future
+            # reference.  The user will be prompted to for the various nutrient
+            # contents of the food.
+            addFood(stdscr)
         elif choice == '4':
             stdscr.clear()
             stdscr.addstr("Option 4")
